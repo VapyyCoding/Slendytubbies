@@ -1,0 +1,215 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FNF: Slender Tubbies</title>
+    <style>
+        /* General styles */
+        body {
+            margin: 0;
+            font-family: 'Arial', sans-serif;
+            color: white;
+            display: flex;
+            flex-direction: column;
+            align-items: flex-start; /* Mover contenido hacia la izquierda */
+            justify-content: center;
+            height: 100vh;
+            overflow: hidden;
+            background: black;
+        }
+
+        /* Background images container */
+        .background-container {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            z-index: -1;
+        }
+
+        /* Background images with fading effect */
+        .background-image {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-size: cover;
+            background-position: center;
+            animation: fade 18s infinite;
+            opacity: 0;
+            transition: opacity 1s ease-in-out;
+        }
+
+        /* Specific timings for each image */
+        .background-image:nth-child(1) {
+            background-image: url('1.png');
+            animation-delay: 0s;
+        }
+        .background-image:nth-child(2) {
+            background-image: url('2.png');
+            animation-delay: 6s;
+        }
+        .background-image:nth-child(3) {
+            background-image: url('3.png');
+            animation-delay: 12s;
+        }
+
+        /* Animation for fading effect */
+        @keyframes fade {
+            0% {
+                opacity: 0;
+            }
+            20% {
+                opacity: 0.5;
+            }
+            40% {
+                opacity: 0.5;
+            }
+            60% {
+                opacity: 0;
+            }
+            100% {
+                opacity: 0;
+            }
+        }
+
+        /* Content container */
+        .content {
+            text-align: left;
+            background: rgba(0, 0, 0, 0.7);
+            padding: 30px;
+            border-radius: 10px;
+            box-shadow: 0 0 20px rgba(0, 0, 0, 0.8);
+            width: 90%;
+            max-width: 500px;
+            margin-left: 5%; /* Mover contenido más a la izquierda */
+        }
+
+        /* Title styles */
+        h1 {
+            font-size: 2.5rem;
+            margin-bottom: 10px;
+        }
+
+        h1 span {
+            color: red;
+        }
+
+        p {
+            font-size: 1.1rem;
+            margin-bottom: 20px;
+            line-height: 1.5;
+            color: #cfcfcf;
+        }
+
+        /* Button styles */
+        .button-container {
+            display: flex;
+            flex-direction: column;
+            gap: 10px;
+        }
+
+        .button-row {
+            display: flex;
+            justify-content: flex-start;
+            gap: 10px;
+        }
+
+        .button {
+            text-decoration: none;
+            font-size: 1rem;
+            font-weight: bold;
+            color: white;
+            padding: 10px 20px;
+            border-radius: 5px;
+            transition: background 0.3s, transform 0.2s;
+            display: inline-block;
+        }
+
+        .button:hover {
+            transform: scale(1.05);
+        }
+
+        .button.red {
+            background: #ff4500;
+        }
+
+        .button.red:hover {
+            background: #e63e00;
+        }
+
+        .button.green {
+            background: #28a745;
+        }
+
+        .button.green:hover {
+            background: #218838;
+        }
+
+        .button.blue {
+            background: #007bff;
+        }
+
+        .button.blue:hover {
+            background: #0056b3;
+        }
+
+        /* Footer styles */
+        .footer {
+            text-align: left; /* Alinear texto del footer a la izquierda */
+            margin-top: 20px;
+            font-size: 0.9rem;
+            margin-left: 5%; /* Mover el footer más a la izquierda */
+            width: 90%;
+        }
+
+        .footer a {
+            color: white;
+            text-decoration: none;
+            margin: 0 10px;
+        }
+
+        .footer a:hover {
+            text-decoration: underline;
+        }
+    </style>
+</head>
+<body>
+    <!-- Background container -->
+    <div class="background-container">
+        <div class="background-image"></div>
+        <div class="background-image"></div>
+        <div class="background-image"></div>
+    </div>
+
+    <!-- Main content -->
+    <div class="content">
+        <h1><span>FNF</span>: Slender Tubbies</h1>
+        <br>
+        <p>FNF: Slender Tubbies Enjoy Amazing Songs and Art <br> 
+            This contains collaborations and many fun songs!</p>
+        <br>
+        <div class="button-container">
+            <!-- First row of buttons -->
+            <div class="button-row">
+                <a href="https://www.youtube.com/watch?v=hlDw7ktS8_8" class="button red">Youtube (Channel)</a>
+                <a href="https://www.google.com/search?client=opera-gx&q=cats&sourceid=opera&ie=UTF-8&oe=UTF-8" class="button green">What do I put here?</a>
+            </div>
+            <!-- Second row of buttons -->
+            <div class="button-row">
+                <a href="https://example.com/campaign-32bit" class="button blue">Campaign (32bit)</a>
+                <a href="https://example.com/campaign-64bit" class="button blue">Campaign (64bit)</a>
+            </div>
+        </div>
+    </div>
+
+    <!-- Footer below the content -->
+    <div class="footer">
+        <a href="https://discord.gg/wg58AyCR" target="_blank">Join in Discord</a> | 
+        <a href="https://x.com/TubbyNightFunk" target="_blank">Go to twitter</a>
+    </div>
+</body>
+</html>
